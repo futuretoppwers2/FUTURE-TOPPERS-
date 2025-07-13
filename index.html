@@ -1,19 +1,20 @@
-<!-- Paste this full updated HTML in your index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Future Toppers</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>Future Toppers - Enroll</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Quicksand', sans-serif;
       background: #0f0f1a;
-      overflow-x: hidden;
       color: white;
+      text-align: center;
+      min-height: 100vh;
+      overflow-x: hidden;
     }
 
     canvas#bg {
@@ -23,66 +24,65 @@
       z-index: -1;
     }
 
-    header {
-      text-align: center;
-      padding: 2rem 1rem 1rem;
+    .container {
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      padding-top: 80px;
     }
 
-    header h1 {
-      font-size: 2.2rem;
-      color: #00f0ff;
-      text-shadow: 0 0 15px #00f0ff55;
-    }
-
-    #searchInput {
-      margin-top: 1rem;
-      padding: 0.6rem 1rem;
-      font-size: 1rem;
-      border-radius: 12px;
-      border: none;
-      background: rgba(255,255,255,0.1);
-      color: white;
-      outline: none;
-      box-shadow: 0 0 12px #00f0ff33;
-    }
-
-    .grid {
-      max-width: 1100px;
-      margin: 2rem auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
-      padding: 0 1rem 2rem;
-    }
-
-    .card {
+    .glass-box {
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(255,255,255,0.2);
       border-radius: 20px;
       padding: 2rem;
-      text-align: center;
       backdrop-filter: blur(14px);
-      color: white;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 0 15px rgba(0,255,255,0.1);
-      transition: all 0.4s ease;
+      box-shadow: 0 0 20px rgba(0,255,255,0.1);
+      max-width: 700px;
+      margin: 0 auto;
     }
 
-    .card:hover {
+    .banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 15px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 15px rgba(0,255,255,0.15);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 12px #00f0ff77;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      color: #ccc;
+    }
+
+    a.enroll-btn {
+      padding: 0.8rem 2rem;
+      font-size: 1.1rem;
+      background: #00f0ff;
+      color: #000;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 0 18px #00f0ff88;
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: inline-block;
+    }
+
+    a.enroll-btn:hover {
       transform: scale(1.05);
       box-shadow: 0 0 25px #00f0ffcc;
     }
 
-    .card span {
-      display: block;
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
     footer {
-      text-align: center;
-      padding: 2rem;
+      margin-top: 3rem;
       font-size: 0.9rem;
       color: #aaa;
     }
@@ -90,42 +90,27 @@
 </head>
 <body>
 
-  <!-- Glowing background -->
+  <!-- Particle background -->
   <canvas id="bg"></canvas>
 
-  <header>
-    <h1>📚 Future Toppers</h1>
-    <input type="text" id="searchInput" placeholder="Search subject...">
-  </header>
+  <div class="container">
+    <div class="glass-box">
+      <div class="banner">
+        <img src="https://via.placeholder.com/800x400?text=Batch+Photo+Coming+Soon" alt="Batch Photo">
+      </div>
 
-  <div class="grid" id="subjectGrid">
-    <a class="card" href="https://futuretoppersmaths.netlify.app/"><span>➗</span>Maths</a>
-    <a class="card" href="https://futuretoppersscience89.netlify.app/"><span>🧪</span>Science</a>
-    <a class="card" href="https://futuretopperssst68.netlify.app/"><span>🌍</span>SST</a>
-    <a class="card" href="https://futuretoppershindi.netlify.app/"><span>📝</span>Hindi</a>
-    <a class="card" href="https://futuretoppersenglish89.netlify.app/"><span>📘</span>English</a>
-    <a class="card" href="https://futureyopperssanskrit.netlify.app/"><span>📜</span>Sanskrit</a>
-    <a class="card" href="https://futuretoppersitai89.netlify.app/"><span>💻</span>AI / IT</a>
-    <a class="card" href="https://futuretoppersdppvault.netlify.app/"><span>🔐</span>DPP Vault</a>
+      <h1>Welcome to Future Toppers</h1>
+      <p>Join our premium batch to get access to subject-wise lectures, notes & DHA.</p>
+
+      <a href="https://subjectsfuturetoppers.netlify.app/" class="enroll-btn">🚀 Enroll Now</a>
+    </div>
+
+    <footer>
+      © 2025 Future Toppers. All rights reserved.
+    </footer>
   </div>
 
-  <footer>
-    Made with 💙 by Future Toppers
-  </footer>
-
-  <script>
-    const input = document.getElementById('searchInput');
-    const cards = document.querySelectorAll('.card');
-    input.addEventListener('input', () => {
-      const val = input.value.toLowerCase();
-      cards.forEach(card => {
-        const text = card.innerText.toLowerCase();
-        card.style.display = text.includes(val) ? 'block' : 'none';
-      });
-    });
-  </script>
-
-  <!-- Particle background animation -->
+  <!-- Particle Animation Script -->
   <script>
     const canvas = document.getElementById("bg");
     const ctx = canvas.getContext("2d");
@@ -152,6 +137,7 @@
         ctx.fill();
         p.x += p.dx;
         p.y += p.dy;
+
         if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
         if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
       }
